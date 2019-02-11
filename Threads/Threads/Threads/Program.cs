@@ -13,10 +13,13 @@ namespace Threads
 		{
 			var work1 = new Work1();
 			var work2 = new Work2();
+
 			var thread1 = new Thread(() => work1.DoWork());
 			thread1.Start();
+
 			var thread2 = new Thread(() => work2.DoWork());
 			thread2.Start();
+
 			Console.ReadKey();
 		}
 	}
