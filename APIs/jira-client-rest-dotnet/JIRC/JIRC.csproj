@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11855D58-010C-4394-A884-815DCA74DE23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JIRC</RootNamespace>
+    <AssemblyName>JiraRestClientDotNet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\JiraRestClientDotNet.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ServiceStack.Common, Version=3.9.59.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ServiceStack.Bugfix\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=3.9.59.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ServiceStack.Bugfix\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=3.9.59.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ServiceStack.Bugfix\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Attachment.cs" />
+    <Compile Include="Domain\AvatarSizes.cs" />
+    <Compile Include="Domain\CustomFieldTypes.cs" />
+    <Compile Include="Domain\Input\SpecialAssignee.cs" />
+    <Compile Include="Domain\Input\FieldUpdateElement.cs" />
+    <Compile Include="Domain\Input\GetCreateIssueMetadataOptionsBuilder.cs" />
+    <Compile Include="Clients\JiraComponentRestClient.cs" />
+    <Compile Include="Clients\JiraIssueRestClient.cs" />
+    <Compile Include="Clients\JiraMetadataRestClient.cs" />
+    <Compile Include="Clients\JiraProjectRestClient.cs" />
+    <Compile Include="Clients\JiraProjectRolesRestClient.cs" />
+    <Compile Include="Clients\JiraSearchRestClient.cs" />
+    <Compile Include="Clients\JiraSessionRestClient.cs" />
+    <Compile Include="Clients\JiraUserRestClient.cs" />
+    <Compile Include="Clients\JiraVersionRestClient.cs" />
+    <Compile Include="Domain\AddressableNamedEntity.cs" />
+    <Compile Include="Domain\AssigneeInfo.cs" />
+    <Compile Include="Domain\AssigneeType.cs" />
+    <Compile Include="Domain\AvatarUrl.cs" />
+    <Compile Include="Domain\BasicComponent.cs" />
+    <Compile Include="Domain\BasicIssue.cs" />
+    <Compile Include="Domain\BasicIssueType.cs" />
+    <Compile Include="Domain\BasicPriority.cs" />
+    <Compile Include="Domain\BasicProjectRole.cs" />
+    <Compile Include="Domain\BasicResolution.cs" />
+    <Compile Include="Domain\BasicStatus.cs" />
+    <Compile Include="Domain\BasicUser.cs" />
+    <Compile Include="Domain\BasicVotes.cs" />
+    <Compile Include="Domain\BasicWatchers.cs" />
+    <Compile Include="Domain\BulkOperationErrorResult.cs" />
+    <Compile Include="Domain\BulkOperationResult.cs" />
+    <Compile Include="Domain\CimFieldInfo.cs" />
+    <Compile Include="Domain\CimIssueType.cs" />
+    <Compile Include="Domain\CimProject.cs" />
+    <Compile Include="Domain\Comment.cs" />
+    <Compile Include="Domain\Component.cs" />
+    <Compile Include="Domain\Field.cs" />
+    <Compile Include="Domain\FieldSchema.cs" />
+    <Compile Include="Domain\Filter.cs" />
+    <Compile Include="Domain\Input\ComplexIssueInputFieldValue.cs" />
+    <Compile Include="Domain\Input\ComponentInput.cs" />
+    <Compile Include="Domain\Input\ComponentInputWithProjectKey.cs" />
+    <Compile Include="Domain\Input\FieldInput.cs" />
+    <Compile Include="Domain\Input\GetCreateIssueMetadataOptions.cs" />
+    <Compile Include="Domain\Input\IssueInput.cs" />
+    <Compile Include="Domain\Input\IssueInputBuilder.cs" />
+    <Compile Include="Domain\Input\LinkIssuesInput.cs" />
+    <Compile Include="Domain\Input\UpdateFieldInput.cs" />
+    <Compile Include="Domain\Input\VersionInput.cs" />
+    <Compile Include="Domain\Input\VersionPosition.cs" />
+    <Compile Include="Domain\Input\WorklogInput.cs" />
+    <Compile Include="Domain\Issue.cs" />
+    <Compile Include="Domain\IssueFieldId.cs" />
+    <Compile Include="Domain\IssueLinksType.cs" />
+    <Compile Include="Domain\IssueLinkType.cs" />
+    <Compile Include="Domain\IssueType.cs" />
+    <Compile Include="Domain\JiraVersion.cs" />
+    <Compile Include="Domain\LoginInfo.cs" />
+    <Compile Include="Domain\Priority.cs" />
+    <Compile Include="Domain\Project.cs" />
+    <Compile Include="Domain\ProjectRole.cs" />
+    <Compile Include="Domain\Resolution.cs" />
+    <Compile Include="Domain\RoleActor.cs" />
+    <Compile Include="Domain\SearchResult.cs" />
+    <Compile Include="Domain\SecurityLevel.cs" />
+    <Compile Include="Domain\ServerInfo.cs" />
+    <Compile Include="Domain\Session.cs" />
+    <Compile Include="Domain\StandardOperation.cs" />
+    <Compile Include="Domain\Status.cs" />
+    <Compile Include="Domain\Transition.cs" />
+    <Compile Include="Domain\Input\TransitionInput.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\Util\ErrorCollection.cs" />
+    <Compile Include="Domain\VersionRelatedIssuesCount.cs" />
+    <Compile Include="Domain\Visibility.cs" />
+    <Compile Include="Domain\Votes.cs" />
+    <Compile Include="Domain\Watchers.cs" />
+    <Compile Include="Extensions\RestFormatExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\UriExtensions.cs" />
+    <Compile Include="IComponentRestClient.cs" />
+    <Compile Include="IIssueRestClient.cs" />
+    <Compile Include="IJiraRestClient.cs" />
+    <Compile Include="IMetadataRestClient.cs" />
+    <Compile Include="Internal\Json\CimFieldsInfoMapJsonParser.cs" />
+    <Compile Include="Internal\Json\CustomJsonSerializer.cs" />
+    <Compile Include="Internal\Json\Gen\BasicUserJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\CommentJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\ComplexIssueInputFieldValueJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\ComponentInputWithProjectKeyJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\IssueEditMetaJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\IssueInputJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\IssuesInputJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\IssueUpdateJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\LinkIssuesInputJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\TransitionInputJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\VersionInputJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\VersionPositionInputJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\VisibilityJsonGenerator.cs" />
+    <Compile Include="Internal\Json\Gen\WorklogInputJsonGenerator.cs" />
+    <Compile Include="Internal\Json\TransitionJsonParser.cs" />
+    <Compile Include="Domain\ServerVersionConstants.cs" />
+    <Compile Include="IProjectRestClient.cs" />
+    <Compile Include="Clients\JiraRestClient.cs" />
+    <Compile Include="Domain\BasicProject.cs" />
+    <Compile Include="IProjectRolesRestClient.cs" />
+    <Compile Include="ISearchRestClient.cs" />
+    <Compile Include="ISessionRestClient.cs" />
+    <Compile Include="IUserRestClient.cs" />
+    <Compile Include="IVersionRestClient.cs" />
+    <Compile Include="JiraRestClientFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\SessionInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
