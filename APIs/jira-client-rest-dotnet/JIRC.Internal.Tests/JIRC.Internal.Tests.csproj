@@ -74,12 +74,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JIRC\JIRC.csproj">
-      <Project>{11855D58-010C-4394-A884-815DCA74DE23}</Project>
-      <Name>JIRC</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="JsonResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>JsonResource.Designer.cs</LastGenOutput>

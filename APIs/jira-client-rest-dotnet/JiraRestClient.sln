@@ -11,17 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BCEFD0
 		JIRC\Domain\TransitionInput.cs = JIRC\Domain\TransitionInput.cs
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIRC", "JIRC\JIRC.csproj", "{11855D58-010C-4394-A884-815DCA74DE23}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIRC.Internal.Tests", "JIRC.Internal.Tests\JIRC.Internal.Tests.csproj", "{8F3E1DCE-9EC8-4BB8-8C1D-37597605FB47}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{533C9CF6-4D26-4D5E-B827-96CBD8EE9D6C}"
 	ProjectSection(SolutionItems) = preProject
 		Build\build.proj = Build\build.proj
 		Build\JIRC.nuspec = Build\JIRC.nuspec
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraRestClientTest", "JiraRestClientTest\JiraRestClientTest.csproj", "{D78BB306-E51B-48D4-8DA8-3134311A7393}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JiraRestClientTest", "JiraRestClientTest\JiraRestClientTest.csproj", "{D78BB306-E51B-48D4-8DA8-3134311A7393}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{11855D58-010C-4394-A884-815DCA74DE23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11855D58-010C-4394-A884-815DCA74DE23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11855D58-010C-4394-A884-815DCA74DE23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11855D58-010C-4394-A884-815DCA74DE23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F3E1DCE-9EC8-4BB8-8C1D-37597605FB47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F3E1DCE-9EC8-4BB8-8C1D-37597605FB47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F3E1DCE-9EC8-4BB8-8C1D-37597605FB47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F3E1DCE-9EC8-4BB8-8C1D-37597605FB47}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D78BB306-E51B-48D4-8DA8-3134311A7393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D78BB306-E51B-48D4-8DA8-3134311A7393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D78BB306-E51B-48D4-8DA8-3134311A7393}.Release|Any CPU.ActiveCfg = Release|Any CPU
