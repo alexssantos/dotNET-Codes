@@ -1,0 +1,648 @@
+{
+    "expand":"renderedFields,names,schema,transitions,operations,editmeta,changelog",
+    "id":"30605",
+    "self":"https://jira.vodori.com/rest/api/2/issue/30605",
+    "key":"CAYENNE-3622",
+    "fields":
+    {
+        "summary":"Renaming categories does not reflect in the Pepper Library UI",
+        "progress":
+        {
+            "progress":7380,
+            "total":7380,
+            "percent":100
+        },
+        "timetracking":
+        {
+            "originalEstimate":"12h",
+            "remainingEstimate":"0h",
+            "timeSpent":"2.05h",
+            "originalEstimateSeconds":43200,
+            "remainingEstimateSeconds":0,
+            "timeSpentSeconds":7380
+        },
+        "issuetype":
+        {
+            "self":"https://jira.vodori.com/rest/api/2/issuetype/1",
+            "id":"1",
+            "description":"A problem which impairs or prevents the functions of the product.",
+            "iconUrl":"https://jira.vodori.com/images/icons/issuetypes/bug.png",
+            "name":"Bug",
+            "subtask":false
+        },
+        "timespent":7380,
+        "reporter":
+        {
+            "self":"https://jira.vodori.com/rest/api/2/user?username=james.kearney%40vodori.com",
+            "name":"james.kearney@vodori.com",
+            "emailAddress":"james.kearney@vodori.com",
+            "avatarUrls": {
+                "16x16": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=16",
+                "24x24": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=24",
+                "32x32": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=32",
+                "48x48": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=48"
+            },
+            "displayName": "James Kearney",
+            "active": true
+        },
+        "created": "2013-06-03T14:03:49.061-0500",
+        "updated": "2013-06-10T17:08:44.064-0500",
+        "description": "When renaming a category in the Pepper Library, the UI does not update to reflect the new name after completing the change (but the change can be verified by attempting to change the name again).",
+        "priority": {
+            "self": "https://jira.vodori.com/rest/api/2/priority/4",
+            "iconUrl": "https://jira.vodori.com/images/icons/priorities/minor.png",
+            "name": "Minor",
+            "id": "4"
+        },
+        "issuelinks": [],
+        "customfield_10471": null,
+        "customfield_10470": "439",
+        "customfield_10570": null,
+        "customfield_10571": null,
+        "customfield_10572": ["com.atlassian.greenhopper.service.sprint.Sprint@7f82b4d7[name=Pepper FE: Bug Fixes 2,closed=false,startDate=2013-06-10T08:00:00.000-05:00,endDate=2013-06-19T17:00:00.000-05:00,completeDate=<null>,id=102]"],
+        "subtasks": [],
+        "status": {
+            "self": "https://jira.vodori.com/rest/api/2/status/5",
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.",
+            "iconUrl": "https://jira.vodori.com/images/icons/statuses/resolved.png",
+            "name": "Resolved",
+            "id": "5"
+        },
+        "labels": [],
+        "workratio": 17,
+        "project": {
+            "self": "https://jira.vodori.com/rest/api/2/project/CAYENNE",
+            "id": "10511",
+            "key": "CAYENNE",
+            "name": "Pepper Development",
+            "avatarUrls": {
+                "16x16": "https://jira.vodori.com/secure/projectavatar?size=xsmall&pid=10511&avatarId=10380",
+                "24x24": "https://jira.vodori.com/secure/projectavatar?size=small&pid=10511&avatarId=10380",
+                "32x32": "https://jira.vodori.com/secure/projectavatar?size=medium&pid=10511&avatarId=10380",
+                "48x48": "https://jira.vodori.com/secure/projectavatar?pid=10511&avatarId=10380"
+            }
+        },
+        "environment": null,
+        "aggregateprogress": {
+            "progress": 7380,
+            "total": 7380,
+            "percent": 100
+        },
+        "lastViewed": "2013-06-10T17:09:47.719-0500",
+        "customfield_10050": null,
+        "customfield_10770": null,
+        "components": [],
+        "comment": {
+            "startAt": 0,
+            "maxResults": 9,
+            "total": 9,
+            "comments": [
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/comment/41518",
+                    "id": "41518",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=chris.akens%40vodori.com",
+                        "name": "chris.akens@vodori.com",
+                        "emailAddress": "chris.akens@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=48"
+                        },
+                        "displayName": "Chris Akens",
+                        "active": true
+                    },
+                    "body": "A workaround for this issue is to close / leave the Pepper library and re-open. The category name is updated. \n\nIdeally upon updating the category name the UI would refresh automatically. Leaving open for future assessment.",
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=chris.akens%40vodori.com",
+                        "name": "chris.akens@vodori.com",
+                        "emailAddress": "chris.akens@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=48"
+                        },
+                        "displayName": "Chris Akens",
+                        "active": true
+                    },
+                    "created": "2013-06-07T10:43:28.786-0500",
+                    "updated": "2013-06-07T10:43:28.786-0500"
+                },
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/comment/41523",
+                    "id": "41523",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=james.kearney%40vodori.com",
+                        "name": "james.kearney@vodori.com",
+                        "emailAddress": "james.kearney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=48"
+                        },
+                        "displayName": "James Kearney",
+                        "active": true
+                    },
+                    "body": "Workaround for IE+CF users is to close the browser window and re-login (closing the library does not refresh the name).  Can we get this into 3.1.6?",
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=james.kearney%40vodori.com",
+                        "name": "james.kearney@vodori.com",
+                        "emailAddress": "james.kearney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/08ae17080108e734b5c4676f6858b2f1?d=mm&s=48"
+                        },
+                        "displayName": "James Kearney",
+                        "active": true
+                    },
+                    "created": "2013-06-07T10:56:46.333-0500",
+                    "updated": "2013-06-07T10:56:46.333-0500"
+                },
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/comment/41526",
+                    "id": "41526",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=chris.akens%40vodori.com",
+                        "name": "chris.akens@vodori.com",
+                        "emailAddress": "chris.akens@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=48"
+                        },
+                        "displayName": "Chris Akens",
+                        "active": true
+                    },
+                    "body": "Given current scope and timelines around 3.1.6, likely will not be included this unless the date is pushed. We can assess feasibility for 3.1.6 once current items are resolved.",
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=chris.akens%40vodori.com",
+                        "name": "chris.akens@vodori.com",
+                        "emailAddress": "chris.akens@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=48"
+                        },
+                        "displayName": "Chris Akens",
+                        "active": true
+                    },
+                    "created": "2013-06-07T11:00:38.912-0500",
+                    "updated": "2013-06-07T11:00:38.912-0500"
+                },
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/comment/41538",
+                    "id": "41538",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=dan.rumney%40vodori.com",
+                        "name": "dan.rumney@vodori.com",
+                        "emailAddress": "dan.rumney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=48"
+                        },
+                        "displayName": "Dan Rumney",
+                        "active": true
+                    },
+                    "body": "8h for 3.1 fix - 4h for porting to other releases",
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=dan.rumney%40vodori.com",
+                        "name": "dan.rumney@vodori.com",
+                        "emailAddress": "dan.rumney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=48"
+                        },
+                        "displayName": "Dan Rumney",
+                        "active": true
+                    },
+                    "created": "2013-06-07T13:09:57.716-0500",
+                    "updated": "2013-06-07T13:09:57.716-0500"
+                },
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/comment/41541",
+                    "id": "41541",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=scott.rovegno%40vodori.com",
+                        "name": "scott.rovegno@vodori.com",
+                        "emailAddress": "scott.rovegno@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/c7899e3f8a83e9fccc31b56bd197d492?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/c7899e3f8a83e9fccc31b56bd197d492?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/c7899e3f8a83e9fccc31b56bd197d492?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/c7899e3f8a83e9fccc31b56bd197d492?d=mm&s=48"
+                        },
+                        "displayName": "Scott Rovegno",
+                        "active": true
+                    },
+                    "body": "For ADD, either this cannot go live a- is or we'll need the fix included.",
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=scott.rovegno%40vodori.com",
+                        "name": "scott.rovegno@vodori.com",
+                        "emailAddress": "scott.rovegno@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/c7899e3f8a83e9fccc31b56bd197d492?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/c7899e3f8a83e9fccc31b56bd197d492?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/c7899e3f8a83e9fccc31b56bd197d492?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/c7899e3f8a83e9fccc31b56bd197d492?d=mm&s=48"
+                        },
+                        "displayName": "Scott Rovegno",
+                        "active": true
+                    },
+                    "created": "2013-06-07T13:42:51.665-0500",
+                    "updated": "2013-06-07T13:42:51.665-0500"
+                },
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/comment/41546",
+                    "id": "41546",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=chris.akens%40vodori.com",
+                        "name": "chris.akens@vodori.com",
+                        "emailAddress": "chris.akens@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=48"
+                        },
+                        "displayName": "Chris Akens",
+                        "active": true
+                    },
+                    "body": "Given the excess FE capacity next week; this fix has been added to the 3.1.6 release. ",
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=chris.akens%40vodori.com",
+                        "name": "chris.akens@vodori.com",
+                        "emailAddress": "chris.akens@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=48"
+                        },
+                        "displayName": "Chris Akens",
+                        "active": true
+                    },
+                    "created": "2013-06-07T14:03:13.850-0500",
+                    "updated": "2013-06-07T14:03:13.850-0500"
+                },
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/comment/41602",
+                    "id": "41602",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=chris.akens%40vodori.com",
+                        "name": "chris.akens@vodori.com",
+                        "emailAddress": "chris.akens@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=48"
+                        },
+                        "displayName": "Chris Akens",
+                        "active": true
+                    },
+                    "body": "[~dan.rumney@vodori.com] Please assign an FE resource who can look at this issue as part of this weeks sprint.",
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=chris.akens%40vodori.com",
+                        "name": "chris.akens@vodori.com",
+                        "emailAddress": "chris.akens@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/d8af6643ecfb36cf3b56f7f01275db1a?d=mm&s=48"
+                        },
+                        "displayName": "Chris Akens",
+                        "active": true
+                    },
+                    "created": "2013-06-10T11:20:13.353-0500",
+                    "updated": "2013-06-10T11:20:13.353-0500"
+                },
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/comment/41663",
+                    "id": "41663",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=dan.rumney%40vodori.com",
+                        "name": "dan.rumney@vodori.com",
+                        "emailAddress": "dan.rumney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=48"
+                        },
+                        "displayName": "Dan Rumney",
+                        "active": true
+                    },
+                    "body": "Not an issue in 3.2.x",
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=dan.rumney%40vodori.com",
+                        "name": "dan.rumney@vodori.com",
+                        "emailAddress": "dan.rumney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=48"
+                        },
+                        "displayName": "Dan Rumney",
+                        "active": true
+                    },
+                    "created": "2013-06-10T15:51:51.557-0500",
+                    "updated": "2013-06-10T15:51:51.557-0500"
+                },
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/comment/41665",
+                    "id": "41665",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=dan.rumney%40vodori.com",
+                        "name": "dan.rumney@vodori.com",
+                        "emailAddress": "dan.rumney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=48"
+                        },
+                        "displayName": "Dan Rumney",
+                        "active": true
+                    },
+                    "body": "I noticed some calls to {{Deferred#addCallback}}, which no longer exist in Dojo.\r\n\r\nI made a minimal fix in 3.1, so as not to disturb other things that appear to be working.\r\n\r\nI've made an overall fix in 3.5.0 to remove all calls to {{addCallback}}",
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=dan.rumney%40vodori.com",
+                        "name": "dan.rumney@vodori.com",
+                        "emailAddress": "dan.rumney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=48"
+                        },
+                        "displayName": "Dan Rumney",
+                        "active": true
+                    },
+                    "created": "2013-06-10T16:07:17.722-0500",
+                    "updated": "2013-06-10T16:35:15.019-0500"
+                }
+            ]
+        },
+        "customfield_10772": null,
+        "timeoriginalestimate": 43200,
+        "customfield_10771": null,
+        "customfield_10774": null,
+        "customfield_10773": null,
+        "customfield_10775": null,
+        "customfield_10776": {
+            "self": "https://jira.vodori.com/rest/api/2/customFieldOption/10576",
+            "value": "NA - Unknown",
+            "id": "10576"
+        },
+        "votes": {
+            "self": "https://jira.vodori.com/rest/api/2/issue/CAYENNE-3622/votes",
+            "votes": 0,
+            "hasVoted": false
+        },
+        "fixVersions": [
+            {
+                "self": "https://jira.vodori.com/rest/api/2/version/13479",
+                "id": "13479",
+                "description": "Sixth Maintenance release of 3.1",
+                "name": "3.1.6",
+                "archived": false,
+                "released": false
+            },
+            {
+                "self": "https://jira.vodori.com/rest/api/2/version/12970",
+                "id": "12970",
+                "description": "First Release of Pepper 3.5.0",
+                "name": "3.5.0",
+                "archived": false,
+                "released": false
+            }
+        ],
+        "resolution": {
+            "self": "https://jira.vodori.com/rest/api/2/resolution/1",
+            "id": "1",
+            "description": "A fix for this issue is checked into the tree and tested.",
+            "name": "Fixed"
+        },
+        "resolutiondate": "2013-06-10T17:08:44.037-0500",
+        "aggregatetimeoriginalestimate": 43200,
+        "customfield_10971": "Not Started",
+        "duedate": null,
+        "watches": {
+            "self": "https://jira.vodori.com/rest/api/2/issue/CAYENNE-3622/watchers",
+            "watchCount": 4,
+            "isWatching": true
+        },
+        "worklog": {
+            "startAt": 0,
+            "maxResults": 4,
+            "total": 4,
+            "worklogs": [
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/worklog/14384",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=dan.rumney%40vodori.com",
+                        "name": "dan.rumney@vodori.com",
+                        "emailAddress": "dan.rumney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=48"
+                        },
+                        "displayName": "Dan Rumney",
+                        "active": true
+                    },
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=dan.rumney%40vodori.com",
+                        "name": "dan.rumney@vodori.com",
+                        "emailAddress": "dan.rumney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=48"
+                        },
+                        "displayName": "Dan Rumney",
+                        "active": true
+                    },
+                    "comment": "Made changes in 3.5 and 3.1\r\n\r\nCreated reviews for Josh",
+                    "created": "2013-06-10T16:36:51.399-0500",
+                    "updated": "2013-06-10T16:36:51.399-0500",
+                    "started": "2013-06-10T14:00:00.000-0500",
+                    "timeSpent": "1h 45m",
+                    "timeSpentSeconds": 6300,
+                    "id": "14384"
+                },
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/worklog/14386",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=josh.newman%40vodori.com",
+                        "name": "josh.newman@vodori.com",
+                        "emailAddress": "josh.newman@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=48"
+                        },
+                        "displayName": "Josh Newman",
+                        "active": true
+                    },
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=josh.newman%40vodori.com",
+                        "name": "josh.newman@vodori.com",
+                        "emailAddress": "josh.newman@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=48"
+                        },
+                        "displayName": "Josh Newman",
+                        "active": true
+                    },
+                    "comment": "Time submitted by josh.newman@vodori.com for review P3-463",
+                    "created": "2013-06-10T16:56:27.388-0500",
+                    "updated": "2013-06-10T16:56:27.388-0500",
+                    "started": "2013-06-10T16:56:27.274-0500",
+                    "timeSpent": "5m",
+                    "timeSpentSeconds": 300,
+                    "id": "14386"
+                },
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/worklog/14388",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=josh.newman%40vodori.com",
+                        "name": "josh.newman@vodori.com",
+                        "emailAddress": "josh.newman@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=48"
+                        },
+                        "displayName": "Josh Newman",
+                        "active": true
+                    },
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=josh.newman%40vodori.com",
+                        "name": "josh.newman@vodori.com",
+                        "emailAddress": "josh.newman@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=48"
+                        },
+                        "displayName": "Josh Newman",
+                        "active": true
+                    },
+                    "comment": "Time submitted by josh.newman@vodori.com for review P3-462",
+                    "created": "2013-06-10T17:05:23.245-0500",
+                    "updated": "2013-06-10T17:05:23.245-0500",
+                    "started": "2013-06-10T17:05:23.194-0500",
+                    "timeSpent": "6m",
+                    "timeSpentSeconds": 360,
+                    "id": "14388"
+                },
+                {
+                    "self": "https://jira.vodori.com/rest/api/2/issue/30605/worklog/14389",
+                    "author": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=dan.rumney%40vodori.com",
+                        "name": "dan.rumney@vodori.com",
+                        "emailAddress": "dan.rumney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=48"
+                        },
+                        "displayName": "Dan Rumney",
+                        "active": true
+                    },
+                    "updateAuthor": {
+                        "self": "https://jira.vodori.com/rest/api/2/user?username=dan.rumney%40vodori.com",
+                        "name": "dan.rumney@vodori.com",
+                        "emailAddress": "dan.rumney@vodori.com",
+                        "avatarUrls": {
+                            "16x16": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=16",
+                            "24x24": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=24",
+                            "32x32": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=32",
+                            "48x48": "https://secure.gravatar.com/avatar/92915b8f5514d5c4e169352aa2f5befb?d=mm&s=48"
+                        },
+                        "displayName": "Dan Rumney",
+                        "active": true
+                    },
+                    "comment": "Time submitted by dan.rumney@vodori.com for review P3-462",
+                    "created": "2013-06-10T17:08:37.922-0500",
+                    "updated": "2013-06-10T17:08:37.922-0500",
+                    "started": "2013-06-10T17:08:37.874-0500",
+                    "timeSpent": "7m",
+                    "timeSpentSeconds": 420,
+                    "id": "14389"
+                }
+            ]
+        },
+        "customfield_11270": {
+            "self": "https://jira.vodori.com/rest/api/2/customFieldOption/11179",
+            "value": "Pepper3 [Support]",
+            "id": "11179"
+        },
+        "customfield_10271": [
+            {
+                "self": "https://jira.vodori.com/rest/api/2/customFieldOption/10170",
+                "value": "Front-end Developer",
+                "id": "10170"
+            }
+        ],
+        "customfield_11072": null,
+        "customfield_11071": null,
+        "assignee": {
+            "self": "https://jira.vodori.com/rest/api/2/user?username=josh.newman%40vodori.com",
+            "name": "josh.newman@vodori.com",
+            "emailAddress": "josh.newman@vodori.com",
+            "avatarUrls": {
+                "16x16": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=16",
+                "24x24": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=24",
+                "32x32": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=32",
+                "48x48": "https://secure.gravatar.com/avatar/59bd609dabd18e786a779ae6fc85bcae?d=mm&s=48"
+            },
+            "displayName": "Josh Newman",
+            "active": true
+        },
+        "customfield_11073": "1. Select a category from the Categories filter on the left\r\n2. Right-click and choose \"Info\"\r\n3. Rename the category\r\n4. Click \"Save\"\r\n(the category is renamed)\r\n5. Note that the new name is not reflected in the categories filter (Chrome/Linux, Chome/Windows 7)",
+        "customfield_11070": null,
+        "aggregatetimeestimate": 0,
+        "versions": [
+            {
+                "self": "https://jira.vodori.com/rest/api/2/version/13477",
+                "id": "13477",
+                "description": "Fifth Maintenance release of 3.1",
+                "name": "3.1.5",
+                "archived": false,
+                "released": true,
+                "releaseDate": "2013-06-04"
+            }
+        ],
+        "customfield_10075": null,
+        "customfield_10170": "10686",
+        "customfield_11170": null,
+        "timeestimate": 0,
+        "customfield_10071": null,
+        "aggregatetimespent": 7380,
+        "customfield_10070": null
+    }
+}
