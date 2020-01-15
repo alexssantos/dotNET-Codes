@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace api_ef_core.models
+namespace api_ef_core.Models
 {
 	public class Product
 	{
