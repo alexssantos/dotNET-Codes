@@ -32,7 +32,7 @@ namespace core3_ef_15min.Controllers
 		[Route("")]
 		public async Task<ActionResult<Category>> Post([FromServices] DataContext context, [FromBody] Category model)
 		{
-			if (ModelState.isValid)
+			if (ModelState.IsValid)
 			{
 				context.Categories.Add(model);
 				await context.SaveChangesAsync();
