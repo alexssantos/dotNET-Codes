@@ -33,7 +33,7 @@ namespace core3_ef_15min
                 opt.UseInMemoryDatabase("MyDatabase")
             );
             //Singleton connection DB
-            services.AddScoped<DataContext, DataContext>()
+            services.AddScoped<DataContext, DataContext>();
 
             services.AddControllers();
         }
