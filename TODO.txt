@@ -1,0 +1,6 @@
+TODO: 
+	- API Filter Exception
+	- Log
+	- Pegar IP e Atributos da Request.
+
+DONE: 
