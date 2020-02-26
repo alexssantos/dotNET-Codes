@@ -1,9 +1,7 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using core3_ef_15min.Data;
 using core3_ef_15min.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 
 namespace core3_ef_15min.Controllers
@@ -13,7 +11,7 @@ namespace core3_ef_15min.Controllers
 	public class CategoryController : ControllerBase
 	{
 
-		//FIXME: Modo Antigo
+		//DONE: Modo Antigo
 		// private DataContext _context;
 		// public CategoryController(DataContext context)
 		// {
@@ -25,6 +23,18 @@ namespace core3_ef_15min.Controllers
 		public async Task<IActionResult> Get([FromServices] DataContext context)
 		{
 			var categories = await context.Categories.ToListAsync();
+			return Ok(categories);
+		}
+
+		[HttpGet]
+		[Route("all")]
+		public async Task<IActionResult> GetAll([FromServices] DataContext context)
+		{
+			var categories = await context.Categories
+				//ignore global query
+				.IgnoreQueryFilters()
+				.ToListAsync();
+
 			return Ok(categories);
 		}
 

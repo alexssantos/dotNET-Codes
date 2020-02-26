@@ -11,5 +11,7 @@ namespace core3_ef_15min.Models
 		[MaxLength(60, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
 		[MinLength(3, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
 		public string TItle { get; set; }
+
+		public bool Deleted { get; set; }
 	}
 }
