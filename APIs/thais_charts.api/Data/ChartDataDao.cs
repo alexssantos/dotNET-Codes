@@ -19,12 +19,14 @@ namespace thais_charts.api.Controllers
 		public Dictionary<CHART_TYPE, Dictionary<string, List<ChartData>>> GetAll()
 		{			
 			var list = _context.ChartDatas.ToList();
+			
 			if (list.Count == 0)
 			{
 				list = CreateMany(this.BuildMock());
 			}
 
-			Dictionary<CHART_TYPE, Dictionary<string, List<ChartData>>> dict = list.GroupBy(x => x.TipoChart)
+			Dictionary<CHART_TYPE, Dictionary<string, List<ChartData>>> dict = list
+				.GroupBy(x => x.TipoChart)
 				.ToDictionary(
 					key => key.Key,
 					val => val

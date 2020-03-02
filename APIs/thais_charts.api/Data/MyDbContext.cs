@@ -15,21 +15,5 @@ namespace thais_charts.api.Data
 
 		public DbSet<ChartData> ChartDatas { get; set; }
 
-		//protected override void OnModelCreating(ModelBuilder modelBuilder){ }
-		
-		// Config Provider
-		//protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		//{
-		//	if (!optionsBuilder.IsConfigured)
-		//	{
-		//		string connStr = @"Server=(localdb)\mssqllocaldb;Database=EFProviders.InMemory;Trusted_Connection=True;ConnectRetryCount=0";
-				
-		//		//SqlServer Provider
-		//		//optionsBuilder.UseSqlServer(connStr);
-
-		//		//SqlLite Provider
-		//		//options.UseSqlite("Data Source=blogging.db");
-		//	}
-		//}		
 	}
 }
