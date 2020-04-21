@@ -1,0 +1,2 @@
+- Relação muitos para muitos Tag x Regiao
+pq: muitos dados repetidos.

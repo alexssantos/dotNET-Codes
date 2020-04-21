@@ -1,0 +1,23 @@
+<div class="row">
+	<h3 class="my-2 mx-auto">SENSORES (QTD/TEMPO)</h3>
+	<!-- <button mat-stroked-button color="primary" (click)="getGraficoData()" class="my-2 mx-auto"> Carregar </button>
+	<button mat-stroked-button color="primary" (click)="pushOne()" class="my-2 mx-auto"> Adicionar 1 </button> -->
+</div>
+<div style="display: block;">
+	<div class="col-12 mx-auto graph-layout">
+		<canvas
+			baseChart
+			width="600px"
+			height="400px"
+			[datasets]="lineChartData"
+			[labels]="lineChartLabels"
+			[options]="lineChartOptions"
+			[colors]="lineChartColors"
+			[legend]="lineChartLegend"
+			[chartType]="lineChartType"
+			(chartHover)="chartHovered($event)"
+			(chartClick)="chartClicked($event)"
+		>
+		</canvas>
+	</div>
+</div>

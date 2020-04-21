@@ -1,0 +1,44 @@
+<h3 (click)="getTabelaSensores()">SENSORES - TODOS EVENTOS</h3>
+
+<mat-form-field>
+	<mat-label>Filtrar</mat-label>
+	<input matInput (keyup)="applyFilter()"  [(ngModel)]="inputBusca" placeholder="Ex. sensor_010">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+	<table mat-table [dataSource]="dataSource">
+		<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+		<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+		
+		<!-- ID Column -->
+		<ng-container matColumnDef="pais">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> País </th>
+			<td mat-cell *matCellDef="let row"> {{row.pais}} </td>
+		</ng-container>
+
+		<!-- Progress Column -->
+		<ng-container matColumnDef="regiao">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> Região </th>
+			<td mat-cell *matCellDef="let row"> {{row.regiao}}</td>
+		</ng-container>
+
+		<!-- Name Column -->
+		<ng-container matColumnDef="sensorNome">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> Sensor </th>
+			<td mat-cell *matCellDef="let row"> {{row.nome}} </td>
+		</ng-container>
+
+		<!-- Color Column -->
+		<ng-container matColumnDef="valor">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> Valor </th>
+			<td mat-cell *matCellDef="let row"> {{row.valor}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="data">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> Data </th>
+			<td mat-cell *matCellDef="let row"> {{row.data | date:'dd/MM/yyyy H:mm:ss'}} </td>
+		</ng-container>		
+	</table>
+
+	<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [length]="totalItens" showFirstLastButtons></mat-paginator>
+</div>
