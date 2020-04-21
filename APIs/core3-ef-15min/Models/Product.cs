@@ -16,7 +16,7 @@ namespace core3_ef_15min.Models
 		public string Description { get; set; }
 
 		[Required(ErrorMessage = "Este campo é obrigatorio")]
-		[Range(1, int.MaxValue, ErrorMessage = "")]
+		[Range(int.MaxValue, int.MaxValue, ErrorMessage = "")]
 		public decimal Price { get; set; }
 
 		[Required(ErrorMessage = "Este campo é obrigatorio")]
