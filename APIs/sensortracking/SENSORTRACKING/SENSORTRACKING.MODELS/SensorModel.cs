@@ -32,9 +32,9 @@ namespace SENSORTRACKING.MODELS
 		public static SensorModel Build(string tag, long timestampMili, string valor)
 		{
 			string[] tagInArray = tag.Split(".");
-			string paisTag = tagInArray[0];
-			string regiaoTag = tagInArray[1];
-			string sensorNome = tagInArray[2];
+			string paisTag = tagInArray[0] ?? "";
+			string regiaoTag = tagInArray[1] ?? "";
+			string sensorNome = tagInArray[2] ?? "";
 
 			double timestampSeg = timestampMili / 1000;
 			double timestampSegTrunc = Math.Round(timestampSeg, 0);
