@@ -1,0 +1,78 @@
+<div class="page-content">
+	<div class="wrap-page container-fluid">
+		<div class="row">
+			<!-- LEFT SIDE -->
+			<div class="col-9 box order-1 mb-auto border-right">
+				<!-- <h2>BOX LEFT</h2> -->
+				<div class="box__left">
+					<div class="col-12 box__graph p-3 mb-4 mat-elevation-z2">
+						<app-grafico-linha></app-grafico-linha>
+					</div>
+
+					<div class="col-12 box__table p-3 mat-elevation-z2">
+						<app-tabela-sensores></app-tabela-sensores>
+					</div>
+				</div>
+			</div>
+
+			<!-- RIGHT SIDE -->
+			<div class="col-3 box order-2">
+				<div class="box__right">
+					<div class="box__totais p-3 mat-elevation-z2">
+						<div class="table-total">							
+
+							<input type="text" class="form-control form-control-sm my-2" id="inputFilter1" aria-describedby="emailHelp" placeholder="regioes" disabled>								
+							<input type="text" class="form-control form-control-sm my-2" id="inputFilter2" aria-describedby="emailHelp" placeholder="sensores" disabled>								
+							
+							<button mat-stroked-button color="primary" class="col-12 my-2"
+								(click)="getTableTotaisData()">Carregar</button>
+							<!-- <hr> -->
+
+							<!-- tableas e sub-tabelas -->
+							<table class="table table-hover col-12 col-md-12 col-sm-12">
+								<thead>
+									<tr>
+										<th scope="col">NOME</th>
+										<th scope="col">TOTAL</th>
+									</tr>
+								</thead>
+								<tbody *ngFor="let regiao of tabelaTotaisList; let i = index">
+
+									<!-- TOTAL ROW -->
+									<tr class="tr-total" (click)="fechaAbaRegiaoTabela(regiao)">
+										<td>{{ regiao.regiaoNome | uppercase }}</td>
+										<td>{{ regiao.regiaoTotal }}</td>
+									</tr>
+
+									<!-- subtable -->
+									<tr>
+										<td *ngIf="regiao.rowOpen" colspan="2">
+											<table class="table">
+												<tbody>
+													<tr
+														*ngFor="let sensor of tabelaTotaisList[i].sensores;	let j = index">
+														<td>{{ sensor.nome }}</td>
+														<td>{{ sensor.total }}</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+								<tbody
+									*ngIf="((!tabelaTotaisList) || (tabelaTotaisList && tabelaTotaisList.length == 0))">
+
+									<!-- TOTAL ROW -->
+									<tr class="tr-total" (click)="subTable()">
+										<td> --- </td>
+										<td> --- </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

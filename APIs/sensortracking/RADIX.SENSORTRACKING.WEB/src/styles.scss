@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+	min-height: 100vh;
+	overflow-y: hidden;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+// =====================================================
+// =========== BOOTSTRAP ================
+// =====================================================
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+// =====================================================
+// GLOBAL 
+// =====================================================
+
+$heightFooter: 64px;
+
+.debug-red{
+	border: 2px solid red;
+}
+
+.debug-blue{
+	border: 2px solid blue;
+}
+
+.page-content {
+	display: flex;
+	//align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	background-color: #EEEEEE;
+
+	//ativando o scroll: width 100% -> 100vh
+	overflow-y: scroll;
+
+ 	min-width: 550px;
+	min-height: 70vh;
+
+	height: 93vh;//calc(100vh - $heightFooter);
+
+	padding-top: 10px;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+}

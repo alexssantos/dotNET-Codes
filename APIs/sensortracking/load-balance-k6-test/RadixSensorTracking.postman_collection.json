@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "7d1a0f06-c8ec-4575-bd23-5748c7f2b58b",
+		"name": "Radix Sensor Tracking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RADIX SENSOR INPUT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b9a9b5a1-3e1b-464a-b88d-a3dd320d735b",
+						"exec": [
+							"pm.test(() => {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var newId = jsonData.id;\r",
+							"    pm.expect(jsonData.json).to.eql(\r",
+							"        {\r",
+							"            \"id\": newId,\r",
+							"            \"pais\": \"Pais teste\",\r",
+							"            \"regiao\": \"Regiao teste\",\r",
+							"            \"nome\": \"Nome Teste\",\r",
+							"            \"valor\": 123,\r",
+							"        });\r",
+							"  });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"timestamp\": 1539112021301,\n   \"tag\": \"brasil.sudeste.sensor01\",\n   \"valor\" : \"27\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseApi}}sensor",
+					"host": [
+						"{{baseApi}}sensor"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "094bdfe7-ce5d-470b-a66f-2f525fc876be",
+			"key": "baseApi",
+			"value": "http://localhost:64773/api/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

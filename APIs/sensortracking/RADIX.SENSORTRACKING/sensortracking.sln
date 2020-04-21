@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SENSORTRACKING.API", "SENSORTRACKING.API\SENSORTRACKING.API.csproj", "{D686672F-2AFC-4082-9447-07663DDEEE60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SENSORTRACKING.MODELS", "SENSORTRACKING.MODELS\SENSORTRACKING.MODELS.csproj", "{AA9314FB-CB5E-450D-95D2-B8A9C25B30C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SENSORTRACKING.DAO", "SENSORTRACKING.DAO\SENSORTRACKING.DAO.csproj", "{F89B6A5C-87EC-4871-8228-27B9F62FCFA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SENSORTRACKING.SERVICES", "SENSORTRACKING.SERVICES\SENSORTRACKING.SERVICES.csproj", "{7F41FC03-E10F-4E01-8E5B-920B21318898}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D686672F-2AFC-4082-9447-07663DDEEE60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D686672F-2AFC-4082-9447-07663DDEEE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D686672F-2AFC-4082-9447-07663DDEEE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D686672F-2AFC-4082-9447-07663DDEEE60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA9314FB-CB5E-450D-95D2-B8A9C25B30C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA9314FB-CB5E-450D-95D2-B8A9C25B30C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA9314FB-CB5E-450D-95D2-B8A9C25B30C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA9314FB-CB5E-450D-95D2-B8A9C25B30C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89B6A5C-87EC-4871-8228-27B9F62FCFA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89B6A5C-87EC-4871-8228-27B9F62FCFA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89B6A5C-87EC-4871-8228-27B9F62FCFA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89B6A5C-87EC-4871-8228-27B9F62FCFA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F41FC03-E10F-4E01-8E5B-920B21318898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F41FC03-E10F-4E01-8E5B-920B21318898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F41FC03-E10F-4E01-8E5B-920B21318898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F41FC03-E10F-4E01-8E5B-920B21318898}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C3AB120-0220-4B27-8A9D-AA756325AFD7}
+	EndGlobalSection
+EndGlobal
