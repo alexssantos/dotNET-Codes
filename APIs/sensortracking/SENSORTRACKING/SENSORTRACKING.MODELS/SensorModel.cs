@@ -54,5 +54,10 @@ namespace SENSORTRACKING.MODELS
 
 			return model;
 		}
+
+		public override int GetHashCode()
+		{
+			return HashCode.Combine(Id, Pais, Regiao, Nome, Valor, ValorNumero, Data, DataHoraInsert);
+		}
 	}
 }
