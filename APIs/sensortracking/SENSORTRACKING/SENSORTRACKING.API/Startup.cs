@@ -20,10 +20,9 @@ namespace SENSORTRACKING.API
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			//SqlServer + ConnString
-			//services.AddDataAccessServices(Configuration.GetConnectionString("SensorTrackingConn"));
+			string connStr = Configuration.GetConnectionString("SensorTracking");
+			services.AddDataAccessServices(connStr);
 
-			services.AddDataAccessServices();
 			services.AddSensorTrackingServices();
 			services.AddSensorTrackingDaos();
 
