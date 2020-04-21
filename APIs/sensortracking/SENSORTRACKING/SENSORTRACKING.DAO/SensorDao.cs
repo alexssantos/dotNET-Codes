@@ -31,7 +31,16 @@ namespace SENSORTRACKING.DAO
 
 		public Dictionary<string, Dictionary<string, int>> GetTotaisPorRegiao()
 		{
-			Dictionary<string, Dictionary<string, int>> totaisDict = _context.Sensores
+			/*EXCEPTION: Momery Leak
+				reference to constant expression of 'Microsoft.EntityFrameworkCore.Metadata.IPropertyBase' 
+				which is being passed as argument to method 'TryReadValue'.This could potentially cause 
+				memory leak.Consider assigning this constant to local variable and using the variable in the query instead...
+				https://dzone.com/articles/investigating-a-memory-leak-in-entity-framework-co
+			*/
+
+			List<SensorModel> groupQuery = _context.Sensores.ToList();
+
+			Dictionary<string, Dictionary<string, int>> totaisDict = groupQuery
 				.GroupBy(x => x.Regiao)
 				.ToDictionary(
 					kvp => kvp.Key,
