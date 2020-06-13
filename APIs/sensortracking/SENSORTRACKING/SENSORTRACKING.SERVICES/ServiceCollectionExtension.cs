@@ -10,13 +10,17 @@ namespace SENSORTRACKING.SERVICES
 {
 	public static class ServiceCollectionExtension
 	{
-		public static void AddDataAccessServices(this IServiceCollection services)
+		public static void AddDataAccessServicesDev(this IServiceCollection services)
 		{
 			services.AddDbContext<SensorTrackingDbContext>(options =>
-				//SqlServer + connString
-				//options.UseSqlServer(connectionString));
-
 				options.UseInMemoryDatabase("radix-stdb"));
+		}
+
+		public static void AddDataAccessServices(this IServiceCollection services, string connString)
+		{
+			services.AddDbContext<SensorTrackingDbContext>(options =>
+				options.UseSqlServer(connString));
+
 		}
 
 		public static void AddSensorTrackingServices(this IServiceCollection services)
@@ -33,7 +37,12 @@ namespace SENSORTRACKING.SERVICES
 
 		public static void FillDatabase(SensorTrackingDbContext context)
 		{
-			context.Database.EnsureCreated();
+			bool createdDb = context.Database.EnsureCreated();
+			if (createdDb)
+			{
+				string done = "criado";
+			}
+
 			if (context.Sensores.Any())
 			{
 				return;
@@ -79,7 +88,7 @@ namespace SENSORTRACKING.SERVICES
 						long timestamp = Convert.ToInt64(Math.Round(timeStampCur));
 
 						SensorModel model = SensorModel.Build(tag, timestamp, valor);
-						model.Id = idTemp;
+						//model.Id = idTemp;
 						novosModels.Add(model);
 
 						idTemp += 1;
@@ -89,8 +98,8 @@ namespace SENSORTRACKING.SERVICES
 			}
 
 			// https://docs.microsoft.com/pt-br/ef/core/modeling/data-seeding#custom-initialization-logic
-			context.Sensores.AddRange(novosModels);
-			context.SaveChanges();
+			context.Sensores.AddRangeAsync(novosModels);
+			context.SaveChangesAsync();
 		}
 
 		private static int GetRandomInt(int max)

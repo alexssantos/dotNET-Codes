@@ -32,9 +32,9 @@ namespace SENSORTRACKING.MODELS
 		public static SensorModel Build(string tag, long timestampMili, string valor)
 		{
 			string[] tagInArray = tag.Split(".");
-			string paisTag = tagInArray[0];
-			string regiaoTag = tagInArray[1];
-			string sensorNome = tagInArray[2];
+			string paisTag = (tagInArray.Length >= 1) ? tagInArray[0] : "";
+			string regiaoTag = (tagInArray.Length >= 2) ? tagInArray[1] : "";
+			string sensorNome = (tagInArray.Length >= 3) ? tagInArray[2] : "";
 
 			double timestampSeg = timestampMili / 1000;
 			double timestampSegTrunc = Math.Round(timestampSeg, 0);
@@ -53,6 +53,11 @@ namespace SENSORTRACKING.MODELS
 			model.DataHoraInsert = DateTime.Now;
 
 			return model;
+		}
+
+		public override int GetHashCode()
+		{
+			return HashCode.Combine(Id, Pais, Regiao, Nome, Valor, ValorNumero, Data, DataHoraInsert);
 		}
 	}
 }
