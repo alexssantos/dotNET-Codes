@@ -37,11 +37,7 @@ namespace SENSORTRACKING.SERVICES
 
 		public static void FillDatabase(SensorTrackingDbContext context)
 		{
-			bool createdDb = context.Database.EnsureCreated();
-			if (createdDb)
-			{
-				string done = "criado";
-			}
+			context.Database.EnsureCreated();
 
 			if (context.Sensores.Any())
 			{
