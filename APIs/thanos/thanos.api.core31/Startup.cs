@@ -1,12 +1,17 @@
-using core3_ef_15min.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-//using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace core3_ef_15min
+namespace thanos.api.core31
 {
 	public class Startup
 	{
@@ -20,14 +25,6 @@ namespace core3_ef_15min
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			//set Data Context
-			services.AddDbContext<DataContext>(opt =>
-				//option
-				opt.UseInMemoryDatabase("MyDatabase")
-			);
-			//Singleton connection DB
-			services.AddScoped<DataContext, DataContext>();
-
 			services.AddControllers();
 		}
 
